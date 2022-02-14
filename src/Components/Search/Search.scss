@@ -1,0 +1,36 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// Search Input Styles
+.search {
+	position: relative;
+
+	&__input {
+		width: 373px;
+		padding: 15px;
+		padding-left: 64px;
+		@include fontAll(normal, 18px, 24px);
+		background-color: #eff3f4;
+		color: #5c6c79;
+		border: 1px solid #eff3f4;
+		border-radius: 31px;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 1px 1px rgb(167, 245, 245);
+		}
+	}
+
+	&.dark &__input {
+		background-color: #23272f;
+		color: $white;
+		border-color: $white;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 22px;
+		transform: translateY(-50%);
+	}
+}

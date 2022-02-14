@@ -1,0 +1,123 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// =====================
+// LogOut Styles
+// =====================
+
+.sign-up {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+
+	&__inner {
+		position: relative;
+		width: 670px;
+		padding-top: 100px;
+	}
+
+	& .logo {
+		position: absolute;
+		top: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__heading {
+		@include fontAll(700, 30px, 40px);
+	}
+
+	&__form-input--name,
+	&__form-input--name {
+		display: block;
+		width: 100%;
+		padding: 23px 20px;
+		margin-bottom: 25px;
+		@include fontAll(400, 18px, 24px);
+		border: 1px solid rgba($color: #000000, $alpha: 0.2);
+		border-radius: 6px;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 1px #1da1f2;
+		}
+	}
+
+	&__form-use--email {
+		display: inline-block;
+		margin-bottom: 40px;
+		@include fontAll(400, 18px, 24px);
+		text-decoration: none;
+		color: #1da1f2;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 1px #1da1f2;
+		}
+	}
+
+	&__form-heading {
+		margin-top: 0;
+		margin-bottom: 10px;
+		@include fontAll(700, 18px, 24px);
+	}
+
+	&__form-description {
+		margin-top: 0;
+		margin-bottom: 20px;
+		@include fontAll(400, 16px, 24px);
+	}
+
+	&__form-selects {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 20px;
+		margin-bottom: 64px;
+	}
+
+	&__form-select {
+		flex-grow: 1;
+		padding: 23px 20px;
+		@include fontAll(400, 18px, 24px);
+		color: rgba($color: #000000, $alpha: 0.6);
+		border: 1px solid rgba($color: #000000, $alpha: 0.2);
+		border-radius: 6px;
+
+		&:first-child {
+			flex-grow: 2;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 1px #1da1f2;
+		}
+	}
+
+	&__form-btn {
+		width: 100%;
+		padding: 18px 30px;
+		text-align: center;
+		@include fontAll(700, 18px, 24px);
+		background-color: #1da1f2;
+		color: $white;
+		border: 2px solid #1da1f2;
+		border-radius: 76px;
+		@include transition;
+
+		&:hover {
+			background-color: $white;
+			color: #1da1f2;
+		}
+	}
+}

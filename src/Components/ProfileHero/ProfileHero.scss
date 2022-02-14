@@ -1,0 +1,191 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// =========================
+// Profile Hero Styles
+// =========================
+
+.profile-hero {
+	&.dark {
+		color: $white;
+	}
+
+	&__content {
+		padding-top: 0px;
+	}
+
+	&__user {
+		position: relative;
+		padding: 85px 25px 20px;
+		border-bottom: 2px solid #e5e5e5;
+	}
+
+	&__user-image {
+		position: absolute;
+		top: -75px;
+		left: 25px;
+	}
+
+	&__user-profile--btn {
+		position: absolute;
+		top: 20px;
+		right: 25px;
+		padding: 10px 15px;
+		@include fontAll(700, 18px, 24px);
+		letter-spacing: 1px;
+		background-color: $white;
+		border: 1px solid rgba($color: #000000, $alpha: 0.4);
+		border-radius: 50px;
+		cursor: pointer;
+		@include transition;
+
+		&:hover {
+			color: #1da1f2;
+			border-color: #1da1f2;
+		}
+	}
+
+	&.dark &__user-profile--btn {
+		background-color: #087ea4;
+		color: $white;
+
+		&:hover {
+			border-color: transparent;
+			opacity: 0.8;
+		}
+	}
+
+	&__user-name {
+		@include fontAll(700, 24px, 32px);
+	}
+
+	&__user-account {
+		@include fontAll(400, 16px, 21px);
+		text-decoration: none;
+		color: $dark;
+		opacity: 0.6;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+			opacity: 0.8;
+		}
+	}
+
+	&__user-position {
+		margin: 15px 0;
+		@include fontAll(400, 18px, 24px);
+	}
+
+	&__user-link {
+		text-decoration: none;
+		color: #1da1f2;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+
+	&__user-infos {
+		display: flex;
+		column-gap: 20px;
+		@include resetList;
+		margin-bottom: 15px;
+	}
+
+	&__user-info {
+		display: flex;
+		align-items: center;
+		column-gap: 7px;
+		@include fontAll(400, 18px, 24px);
+		opacity: 0.6;
+	}
+
+	&__user-follows {
+		display: flex;
+		column-gap: 30px;
+		@include resetList;
+		margin-bottom: 40px;
+	}
+
+	&__user-follow {
+		@include fontAll(700, 18px, 24px);
+	}
+
+	&__user-follow--text {
+		@include fontAll(400, 18px, 24px);
+		opacity: 0.6;
+	}
+
+	&__pinned {
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
+		margin: 15px 0 5px;
+		padding-left: 66px;
+		@include fontAll(700, 16px, 21px);
+		color: #536471;
+	}
+
+	&.dark &__pinned {
+		color: $text-blue;
+	}
+
+	&__pinned-text {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__user-menu--list {
+		display: flex;
+		justify-content: space-between;
+		@include resetList;
+		padding: 0 25px;
+	}
+
+	&__user-menu--link {
+		position: relative;
+		@include fontAll(400, 18px, 24px);
+		@include transition;
+		text-decoration: none;
+		color: $dark;
+
+		&.active {
+			@include fontAll(700, 18px, 24px);
+			color: $text-blue;
+		}
+
+		&.active::before {
+			content: '';
+			position: absolute;
+			bottom: -20px;
+			width: 100%;
+			height: 5px;
+			background-color: #1da1f2;
+			border-radius: 4px;
+		}
+	}
+
+	&.dark &__user-menu--link {
+		color: $white;
+	}
+
+	&__user-tweets {
+		@include resetList;
+	}
+
+	&__user-tweet {
+		position: relative;
+		display: flex;
+		column-gap: 15px;
+		padding: 10px 25px 21px;
+		border-bottom: 2px solid #e5e5e5;
+	}
+
+	&__user-tweet .ellipsis {
+		position: absolute;
+		top: 21px;
+		right: 25px;
+	}
+}

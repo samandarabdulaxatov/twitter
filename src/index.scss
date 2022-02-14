@@ -1,0 +1,40 @@
+@font-face {
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./Assets/Fonts/Segoe_UI.ttf') format('woff2'),
+		url('./Assets/Fonts/Segoe_UI.ttf') format('woff');
+}
+
+@font-face {
+	font-family: 'Segoe UI';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./Assets/Fonts/Segoe_UI_Bold.ttf') format('woff2'),
+		url('./Assets/Fonts/Segoe_UI_Bold.ttf') format('woff');
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 300px;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1680px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}

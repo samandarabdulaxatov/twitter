@@ -1,0 +1,75 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// =====================
+// Hero Section Styles
+// =====================
+
+.hero {
+	position: relative;
+	padding: 10px 20px 70px;
+	border-bottom: 1px solid #d8d8d8;
+
+	&__header {
+		display: flex;
+		column-gap: 15px;
+	}
+
+	&__input {
+		margin-top: 15px;
+		margin-bottom: 50px;
+		padding: 5px 10px;
+		@include fontAll(400, 20px, 30px);
+		border: 1px solid #eff3f4;
+		background-color: #eff3f4;
+		border-radius: 10px;
+		@include transition;
+
+		&:focus {
+			outline: none;
+			background-color: $text-blue;
+			width: 400px;
+			color: $white;
+		}
+	}
+
+	&.dark &__input {
+		background-color: #23272f;
+	}
+
+	&__icons {
+		display: flex;
+		column-gap: 20px;
+		@include resetList;
+	}
+
+	&__btn {
+		position: absolute;
+		right: 18px;
+		bottom: 26px;
+		padding: 13px 28px;
+		@include fontAll(700, 17px, 17px);
+		background-color: #1da1f2;
+		color: $white;
+		cursor: pointer;
+		border: 2px solid #1da1f2;
+		border-radius: 120px;
+		@include transition;
+
+		&:hover {
+			background-color: $white;
+			color: $text-blue;
+			border-color: $text-blue;
+		}
+	}
+
+	&.dark &__btn {
+		border-color: transparent;
+		background-color: #087ea4;
+		color: $white;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

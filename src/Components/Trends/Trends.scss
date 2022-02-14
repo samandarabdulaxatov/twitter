@@ -1,0 +1,74 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+.trends {
+	margin: 20px 0;
+	padding: 20px 16px 30px;
+	background-color: #f7f9f9;
+	border-radius: 10px;
+
+	&.dark {
+		background-color: #343a46;
+		color: $white;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	&__heading {
+		margin: 0;
+		@include fontAll(700, 24px, 32px);
+	}
+
+	&__list {
+		@include resetList;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item-heading {
+		margin-top: 2px;
+		margin-bottom: 3px;
+	}
+
+	&__item-address,
+	&__item-selected {
+		margin: 0;
+		@include fontAll(400, 16px, 21px);
+		opacity: 0.6;
+	}
+
+	&.dark &__item-address {
+		color: $text-blue;
+		opacity: 1;
+	}
+
+	&__list .ellipsis {
+		position: absolute;
+		top: 15px;
+		right: 0;
+	}
+
+	&__more {
+		@include fontAll(400, 18px, 18px);
+		text-decoration: none;
+		color: #1da1f2;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+// ========================
+// Profile Header Styles
+// ========================
+.profile__header {
+	display: flex;
+	align-items: center;
+	column-gap: 40px;
+	width: 910px;
+	padding: 20px 30px;
+	border-bottom: 1px solid #c4c4c4;
+
+	&-user--name {
+		display: block;
+		margin-bottom: 2px;
+		@include fontAll(700, 20px, 27px);
+	}
+
+	&.dark &-user--name {
+		color: $text-blue;
+	}
+
+	&-user--tweets {
+		@include fontAll(400, 16px, 21px);
+	}
+
+	&.dark &-user--tweets {
+		color: $white;
+	}
+}

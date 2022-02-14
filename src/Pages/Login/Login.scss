@@ -1,0 +1,83 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// ==================
+// Login In Styles
+// ==================
+
+.login {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 80px;
+
+	&__inner {
+		width: 450px;
+	}
+
+	&__heading {
+		margin: 36px 0;
+		@include fontAll(700, 42px, 50px);
+	}
+
+	&__form {
+		margin-bottom: 40px;
+	}
+
+	&__from-input--email,
+	&__from-input--address {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 23px 20px;
+		@include fontAll(400, 18px, 24px);
+		border: 1px solid rgba($color: #000000, $alpha: 0.2);
+		border-radius: 6px;
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 1px #1da1f2;
+		}
+	}
+
+	&__from-button {
+		width: 100%;
+		padding: 16px 28px;
+		@include fontAll(700, 18px, 24px);
+		text-align: center;
+		background-color: #1da1f2;
+		color: $white;
+		border: 2px solid #1da1f2;
+		border-radius: 76px;
+		cursor: pointer;
+		@include transition;
+
+		&:hover {
+			background-color: $white;
+			color: #1da1f2;
+		}
+	}
+
+	&-up__list {
+		display: flex;
+		justify-content: space-between;
+		@include resetList;
+	}
+
+	&-up__link {
+		@include fontAll(400, 18px, 24px);
+		text-decoration: none;
+		color: #1da1f2;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+}

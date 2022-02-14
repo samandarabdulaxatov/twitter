@@ -1,0 +1,47 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// =========================
+// User Styles //
+// =========================
+
+.user {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 10px;
+
+	&__info {
+		margin-right: auto;
+	}
+
+	&__name {
+		margin-bottom: 2px;
+		@include fontAll(700, 16px, 21px);
+	}
+
+	&.dark &__name {
+		color: $white;
+	}
+
+	&__account {
+		@include fontAll(400, 16px, 21px);
+		text-decoration: none;
+		color: $dark;
+		opacity: 0.6;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+			opacity: 1;
+		}
+	}
+
+	&.dark &__account {
+		color: $white;
+
+		&:hover {
+			color: $text-blue;
+		}
+	}
+}

@@ -1,0 +1,105 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+.like {
+	margin-bottom: 30px;
+	padding: 20px 15px 25px;
+	background-color: #f7f9f9;
+	border-radius: 10px;
+
+	&.dark {
+		background-color: #343a46;
+		color: $white;
+	}
+
+	&__heading {
+		margin-top: 0;
+		margin-bottom: 25px;
+		@include fontAll(700, 24px, 32px);
+	}
+
+	&__users {
+		@include resetList;
+		margin-bottom: 30px;
+	}
+
+	&__user {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+
+	&__user-image {
+		margin-right: 13px;
+	}
+
+	&__user-info {
+		margin-right: auto;
+	}
+
+	&__user-name {
+		margin-top: 0;
+		margin-bottom: 1px;
+	}
+
+	&__user-account {
+		@include fontAll(400, 18px, 24px);
+		text-decoration: none;
+		color: #000;
+		opacity: 0.6;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+
+	&.dark &__user-account {
+		color: $white;
+
+		&:hover {
+			color: $text-blue;
+			opacity: 1;
+		}
+	}
+
+	&__user-btn {
+		padding: 10px 15px;
+		@include fontAll(700, 16px, 18px);
+		background-color: #000;
+		color: $white;
+		border: 2px solid #000;
+		border-radius: 50px;
+		@include transition;
+
+		&:hover {
+			background-color: transparent;
+			color: #000;
+		}
+	}
+
+	&.dark &__user-btn {
+		background-color: #087ea4;
+		border-color: transparent;
+
+		&:hover {
+			color: $white;
+			opacity: 0.8;
+		}
+	}
+
+	&__more {
+		@include fontAll(400, 18px, 18px);
+		text-decoration: none;
+		color: #1da1f2;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+}

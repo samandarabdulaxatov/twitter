@@ -1,0 +1,66 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// ========================
+// Header Styles //
+// ========================
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 20px;
+	padding: 20px;
+	border-bottom: 1px solid #d8d8d8;
+
+	& .page__link {
+		@include fontAll(700, 24px, 32px);
+		text-decoration: none;
+		color: $dark;
+		@include transition;
+
+		&:hover {
+			color: $text-blue;
+		}
+	}
+
+	&.dark .page__link {
+		color: $text-blue;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+
+	& .langs__select {
+		margin-left: auto;
+		padding: 5px;
+		font-size: 16px;
+		border: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&.dark .langs__select {
+		background-color: $dark;
+		color: $white;
+		border-color: $white;
+	}
+
+	& .theme-icon {
+		cursor: pointer;
+	}
+
+	& .logout__link {
+		@include fontAll(700, 20px, 24px);
+		color: $text-blue;
+		text-decoration: none;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+}

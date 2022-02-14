@@ -1,0 +1,52 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+// ==============================
+//// Nav Styles ////
+// ===============================
+
+.nav {
+	width: 284px;
+	margin-bottom: 30px;
+
+	&__list {
+		@include resetList;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+
+		&:not(:first-child) {
+			margin-top: 32px;
+		}
+	}
+
+	&__link {
+		@include fontAll(700, 18px, 24px);
+		text-decoration: none;
+		color: $dark;
+		@include transition;
+
+		&:hover {
+			color: $text-blue;
+		}
+
+		&.active {
+			color: $text-blue;
+		}
+	}
+
+	&.dark &__link {
+		color: $text-blue;
+
+		&:hover {
+			color: $white;
+		}
+
+		&.active {
+			color: $white;
+		}
+	}
+}

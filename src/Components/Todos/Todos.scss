@@ -1,0 +1,80 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+.users {
+	@include resetList;
+
+	&.dark {
+		color: $white;
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		column-gap: 15px;
+		padding: 30px 25px 20px;
+		border-bottom: 1px solid #d8d8d8;
+	}
+
+	&__name {
+		margin-right: 5px;
+		@include fontAll(700, 20px, 27px);
+	}
+
+	&__account {
+		@include fontAll(400, 18px, 24px);
+		text-decoration: none;
+		color: $dark;
+		opacity: 0.6;
+		@include transition;
+
+		&:hover {
+			color: orangered;
+		}
+	}
+
+	&.dark &__account {
+		color: $white;
+
+		&:hover {
+			color: $text-blue;
+			opacity: 1;
+		}
+	}
+
+	&__item .ellipsis {
+		position: absolute;
+		top: 40px;
+		right: 25px;
+	}
+
+	&__post {
+		margin-top: 5px;
+		margin-bottom: 15px;
+		@include fontAll(400, 18px, 24px);
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		column-gap: 100px;
+		@include resetList;
+		margin-top: 24px;
+	}
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		height: 20px;
+	}
+
+	&__icon-svg {
+		cursor: pointer;
+	}
+
+	&__icon-click--count {
+		margin-left: 8px;
+		font-size: 20px;
+		color: rgb(239, 28, 92);
+	}
+}

@@ -1,0 +1,30 @@
+@import '../../Assets/Scss/Colors.scss';
+@import '../../Assets/Scss/Mixins.scss';
+
+.menu__btn {
+	width: 230px;
+	margin-bottom: 260px;
+	padding: 15px 30px;
+	@include fontAll(700, 18px, 24px);
+	letter-spacing: 1px;
+	background-color: #1d9bf0;
+	color: $white;
+	border-radius: 28px;
+	border: none;
+	@include transition;
+
+	&:hover {
+		background-color: $white;
+		color: $text-blue;
+		box-shadow: 0 0 0 2px $text-blue;
+	}
+
+	&.dark {
+		background-color: #087ea4;
+		color: $white;
+	}
+
+	&.dark:hover {
+		opacity: 0.8;
+	}
+}
